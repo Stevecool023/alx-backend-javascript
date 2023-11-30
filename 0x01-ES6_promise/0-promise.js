@@ -1,10 +1,16 @@
-export default function getResponseFromAPI() {
+// 0-promise.js
+
+function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    // Simulating an asynchronous operation (e.g., fetching data from an API)
+    // Your asynchronous API call or other asynchronous operations go here
+    // For example:
     setTimeout(() => {
-      // For demonstration purposes, let's resolve the promise with a dummy response
-      const response = { data: "Dummy data from API" };
-      resolve(response);
-    }, 1000); // Simulating a delay of 1 second
+      const data = "Response from the API"; // Replace this with your actual API response
+      resolve(data);
+      // or if there's an error:
+      // reject(new Error("Failed to get response from the API"));
+    }, 1000); // Simulating an asynchronous operation with setTimeout
   });
 }
+
+export default getResponseFromAPI;
